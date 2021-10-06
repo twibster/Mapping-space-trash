@@ -1,6 +1,6 @@
 from flask import render_template,redirect,url_for
 from website.models import Objects
-from website import app
+from website import app,jsglue
 
 
 @app.route("/home",methods =['GET','POST'])
@@ -10,4 +10,4 @@ def raw():
 
 @app.route('/model',methods =['GET','POST'])
 def home():
-    return redirect(url_for('raw'))
+    return render_template('model.html')
