@@ -17,19 +17,19 @@
         </tr>
       </thead>
       <tbody>
-        {% for object in data %}
+        {% for key,value in data.items() %}
           <tr>
-            <th scope="row">{{object.id}}</th>
-            <td>{{object.name}}</td>
-            <td>{{object.x}}</td>
-            <td>{{object.y}}</td>
-            <td>{{object.z}}</td>
-            <td>{{object.vx}}</td>
-            <td>{{object.vy}}</td>
-            <td>{{object.vz}}</td>
-            <td>{{object.latitude}}</td>
-            <td>{{object.longitude}}</td>
-            <td>{{object.altitude}}</td>
+            <th scope="row">{{value['id']}}</th>
+            <td>{{value['name']}}</td>
+            <td>{{value['x']}}</td>
+            <td>{{value['y']}}</td>
+            <td>{{value['z']}}</td>
+            <td>{{value['vx']}}</td>
+            <td>{{value['vy']}}</td>
+            <td>{{value['vz']}}</td>
+            <td>{{value['latitude']}}</td>
+            <td>{{value['longitude']}}</td>
+            <td>{{value['altitude']}}</td>
           </tr>
         {% endfor %}
       </tbody>
